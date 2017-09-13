@@ -1,5 +1,6 @@
 class Item
   @@list = []
+  @@list_of_rank =[]
   # @@list_sort = @@list.sort_by
 
   attr_accessor :name, :rank
@@ -21,8 +22,19 @@ class Item
     @@list = []
   end
 
+  def save_rank()
+    @@list_of_rank.push(self.rank)
+    # @@list_of_rank.push(self[0].rank)
+    # @@list_of_rank.push(self[1].rank)
+  end
+
+  def self.all_rank()
+    @@list_of_rank
+  end
+
   def self.sort()
-    @@list.sort_by { |x| x.rank }
+    # @@list.rank.sort_by { |x| x.rank }
+    @@list.rank { |x| x.sort_by }
   end
 
 end

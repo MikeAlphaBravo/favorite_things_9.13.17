@@ -9,6 +9,7 @@ get('/') do
   erb(:items)
 end
 
+
 post('/') do
   name = params["name"]
   rank = params["rank"]
@@ -16,7 +17,11 @@ post('/') do
   # item = Item.new(params["name"])
   item.save()
   @list = Item.all()
+  # @list.sort()
+  item.save_rank()
+  @list_of_rank = Item.all_rank()
+
   # @list_sort = Item.all()
   erb(:items)
-  # binding.pry
+  binding.pry
 end

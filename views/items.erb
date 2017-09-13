@@ -2,6 +2,7 @@
 
 <% @list.each do |item| %>
   <p><%= item.rank %> <%=  item.name %></p>
+  
 <% end %>
 
 
@@ -12,8 +13,6 @@
     <label for="name">Name</label>
     <input id="name" name="name" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn">Go!</button>
-
   <div class="form-group">
     <label for="rank">Rank</label>
     <input id="rank" name="rank" class="form-control" type="text">

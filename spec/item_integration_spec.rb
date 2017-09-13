@@ -3,7 +3,7 @@ require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-# see line 6
+# adjust line 7 below
 describe('the rectangle path', {:type => :feature}) do
   it('processes the user entry and returns total inputs as a list') do
     visit('/')
@@ -16,6 +16,7 @@ describe('the rectangle path', {:type => :feature}) do
     visit('/')
     fill_in('name', :with => '2')
     click_button('Go!')
+    expect(page).to have_content('1')
     expect(page).to have_content('2')
   end
 

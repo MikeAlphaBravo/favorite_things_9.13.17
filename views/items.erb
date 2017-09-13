@@ -1,8 +1,9 @@
 <h1>List of favorite things</h1>
 
 <% @list.each do |item| %>
-  <p><%= item.name %></p>
+  <p><%= item.rank %> <%=  item.name %></p>
 <% end %>
+
 
 <h4>Add an item to the list:</h4>
 
@@ -10,6 +11,12 @@
   <div class="form-group">
     <label for="name">Name</label>
     <input id="name" name="name" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Go!</button>
+
+  <div class="form-group">
+    <label for="rank">Rank</label>
+    <input id="rank" name="rank" class="form-control" type="text">
   </div>
   <button type="submit" class="btn">Go!</button>
 </form>

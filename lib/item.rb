@@ -23,7 +23,7 @@ class Item
   end
 
   def save_rank()
-    @@list_of_rank.push(self.rank)
+    @@list_of_rank.push([self.rank,self.name])
     # @@list_of_rank.push(self[0].rank)
     # @@list_of_rank.push(self[1].rank)
   end

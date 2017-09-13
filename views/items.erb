@@ -1,10 +1,10 @@
 <h1>List of favorite things</h1>
 
 <% @list.each do |item| %>
-  <p><%= item.rank %> <%=  item.name %></p>
+  <p><% item.rank %> <%  item.name %></p>
 
 <% end %>
-
+<p><%= @list_of_rank%></p>
 
 <h4>Add an item to the list:</h4>
 

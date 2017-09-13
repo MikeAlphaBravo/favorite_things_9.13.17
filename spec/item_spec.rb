@@ -27,5 +27,5 @@ describe("Item") do
       expect(Item.all()).to(eq([]))
     end
   end
-  
+
 end

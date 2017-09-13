@@ -19,7 +19,7 @@ post('/') do
   @list = Item.all()
   # @list.sort()
   item.save_rank()
-  @list_of_rank = Item.all_rank()
+  @list_of_rank = Item.all_rank().sort
 
   # @list_sort = Item.all()
   erb(:items)
